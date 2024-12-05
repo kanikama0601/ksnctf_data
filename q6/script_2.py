@@ -27,7 +27,7 @@ def main():
             }
             response = requests.post(url, data=data)
             str_len = len(response.text)
-            print(f"{str_judge} scanned")
+            # print(f"{str_judge} scanned")
 
         print(f"word{str_num}: {str_judge}")
         word_exp = word_exp + str_judge

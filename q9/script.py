@@ -11,7 +11,7 @@ uri="/q9/flag.html" # urlと合わせるように
 algorithm="MD5"
 qop="auth"
 nc="00000001"
-cnonce="aaaaaaaaaaaaaaaa" #何でもOK
+cnonce="chinchin" #何でもOK
 method="GET:"+uri
 
 encoded_a1 = "c627e19450db746b739f41b64097d449"
@@ -21,7 +21,7 @@ a2 = method
 encoded_a2 = md5(a2.encode('utf-8')).hexdigest()
 
 # リクエストを送信
-url = "http://ctfq.u1tramarine.blue/q9/flag.html"
+url = f"http://ctfq.u1tramarine.blue/{uri}"
 response = requests.get(url)
 print(response.headers)
 if 'www-authenticate' in response.headers:
